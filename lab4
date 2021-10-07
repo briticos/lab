@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int a=1,b=100;
+    int var,bit;
+    scanf("%d",&var);
+    scanf("%d",&bit);
+    printf((var>=a && var<=b) ? "Yes\n" : "No\n");
+    var=var>>2;
+    printf((var==bit)  ? "True\n" : "False\n");
+    return 0;
+}
