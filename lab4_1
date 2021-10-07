@@ -1,0 +1,14 @@
+#include <iostream>
+int main (){
+    int var,var1;
+    scanf("%d",&var);
+    scanf("%x",&var1);
+    printf("%o\n",var);
+    printf("%x\n",var >> 2);
+    printf("%o\n",~var);
+    printf("%x,%x,%x",var1 & var,var1 || var, var1 ^ var); //  и или искл или
+    
+   
+    
+    return 0;
+}
