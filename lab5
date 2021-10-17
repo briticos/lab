@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int matrix_one[2][2],matrix_two[2][2],matrix_end[2][2];
+    int arr[7];
+    printf("Please, enter the first array\n");
+    for(int i=0;i<7;i++)
+        scanf("%d",&arr[i]);
+    printf(" the first array\n");
+    for(int i=0;i<7;i++)
+        printf(" %d  ",arr[i]);
+    printf("\n");
+    printf("Please, enter the first matrix\n");
+    for(int i=0;i<2;i++) {
+        for(int j=0;j<2;j++)
+            scanf("%d", &matrix_one[i][j]);
+    }
+
+    printf("Please, enter the second matrix\n");
+    for(int i=0;i<2;i++) {
+        for(int j=0;j<2;j++)
+            scanf("%d", &matrix_two[i][j]);
+    }
+
+    matrix_end[0][0] = matrix_one[0][0] * matrix_two[0][0] + matrix_one[0][1] * matrix_two[1][0];
+    matrix_end[0][1] = matrix_one[0][0] * matrix_two[0][1] + matrix_one[0][1] * matrix_two[1][1];
+    matrix_end[1][0] = matrix_one[1][0] * matrix_two[0][0] + matrix_one[1][1] * matrix_two[1][0];
+    matrix_end[1][1] = matrix_one[1][0] * matrix_two[0][1] + matrix_one[1][1] * matrix_two[1][1];
+    printf("end  matrix\n");
+    for(int i=0;i<2;i++) {
+        for(int j=0;j<2;j++)
+            printf("%d ",matrix_end[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
