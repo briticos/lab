@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+int sizes(char str[]) {
+    int s= 0;
+    while (str[s] != '\0')
+        s++;
+    return s;
+}
+int main() {
+    int n,cmp,ch,c;
+    char s1[100];
+    printf("Enter 1\n: ");
+    scanf(" %[^\n]s", s1);
+
+    char s2[100];
+    printf("Enter 2\n: ");
+    scanf(" %[^\n]s", s2);
+    int len1= sizes(s1);
+    int len2= sizes(s2);
+
+     //2
+    char *end = (char*)malloc(len1+len2 * sizeof(char));
+    printf("Enter n\n: ");
+    scanf("%d",&n);
+    int i=0;
+    for ( i; i < len1 ; ++i)
+        end[i] = s1[i];
+    for (int k=0; k < n; ++k)
+        end[i+k] = s2[k];
+    printf("%s\n",end);
+   //4
+    int con = 0;
+    for (int i = 0; i < n; ++i) {
+        if (s1[i] != s2[i]) break;
+         else
+            con++;
+    }
+    printf( (con == n)? "Str1=str2 \n":"Str1!=str2 \n");
+    //6
+    char sim;
+    int count=0;
+   printf("Search simbol\n");
+   scanf("%c\n",&sim);
+    printf("is there a simbol in str?\n");
+    for (int j = 0; j < len1; j++) {
+        if (s1[j]==sim)
+            count++;
+    }
+    if (count!=0)
+        printf("Yes\n");
+    else
+        printf("No\n");
+    //8
+    char simbl;
+    printf("Search 1 simbol\n");
+    scanf("%c\n",&simbl);
+    for (int j = 0; j < len1; j++) {
+        if (s1[j]==simbl){
+            printf("%d\n",j);
+        break;}
+    }
+   //10
+    printf("is there s1 a simbol in str2?\n");
+    for (int j = 0; j < len2; j++) {
+        printf((s2[j]==s1[0])?"Yes \n":"No \n");
+        break;
+    }
+
+    return 0;
+}
