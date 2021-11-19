@@ -14,6 +14,7 @@ int main() {
         mun=mun-limit;
         sum=pay+mun*lim;
         printf("ITOG %d",sum);
+        printf("\n");
     }
     else{
         printf("ITOG %d",pay);
@@ -23,27 +24,27 @@ int main() {
     printf("Number\n");
     scanf("%d",&var);
     if(var==0)
-        printf("null");
+        printf("zero");
     if(var==1)
-        printf("first");
+        printf("one");
     if(var==2)
-        printf("second");
+        printf("two");
     if(var==3)
-        printf("third");
+        printf("tree");
     if(var==4)
-        printf("fourth");
+        printf("four");
     if(var==5)
-        printf("fifth");
+        printf("five");
     if(var==6)
-        printf("sixth");
+        printf("six");
     if(var==7)
-        printf("seventh");
+        printf("seven");
     if(var==8)
-        printf("eighth");
+        printf("eight");
     if(var==9)
-        printf("ninth");
-    else
-        printf("tenth");
+        printf("nine");
+
     return 0;
 }
+
 
