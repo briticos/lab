@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    //Number 2
+    int limit=499;
+    int pay,lim,mun,sum;
+    printf("PAY ON LIMIT ");
+    scanf("%d",&pay);
+    printf("PAY OVER LIMIT");
+    scanf("%d",&lim);
+    printf("ALL MIN");
+    scanf("%d",&mun);
+    if(mun>limit){
+        mun=mun-limit;
+        sum=pay+mun*lim;
+        printf("ITOG %d",sum);
+    }
+    else{
+        printf("ITOG %d",pay);
+    }
+    //Number 3
+    int var;
+    printf("Number\n");
+    scanf("%d",&var);
+    if(var==0)
+        printf("null");
+    if(var==1)
+        printf("first");
+    if(var==2)
+        printf("second");
+    if(var==3)
+        printf("third");
+    if(var==4)
+        printf("fourth");
+    if(var==5)
+        printf("fifth");
+    if(var==6)
+        printf("sixth");
+    if(var==7)
+        printf("seventh");
+    if(var==8)
+        printf("eighth");
+    if(var==9)
+        printf("ninth");
+    else
+        printf("tenth");
+    return 0;
+}
+
