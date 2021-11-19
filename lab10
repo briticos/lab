@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+
+// Задание 2
+int fun2(int n){
+    int mas2[n][n-1];
+    int masx[n],masy[n];
+    printf("Enter coordinat from 2\n ");
+    for(int i=0;i<n;i++) {
+        scanf("%d", &masx[i]);
+        scanf("%d", &masy[i]);
+    }
+
+    for(int i=0;i<n;i++) {
+        for(int j=0;j<n-1;j++)
+            mas2[i][j]=sqrt((masx[i]-masx[j])*(masx[i]-masx[j])+(masy[i]-masy[j])*(masy[i]-masy[j]));}
+    printf("Matrix\n ");
+    for(int i=0;i<n;i++) {
+        printf("\n");
+        for(int j=0;j<n-1;j++)
+            printf("%d ",mas2[i][j]);}
+         printf("\n");
+}
+
+// Задание 3
+int fun3(int n){
+    int m=0,arr3[10];
+    while(n!=0){
+        arr3[m]=n%10;
+        n=n/10;
+        m++;
+    }
+    printf("Massiv\n ");
+    for(int i=0;i<m;i++)
+        printf("%d\n",arr3[m-i-1]);
+}
+
+int main(){
+    // Задание 3
+    int n3;
+    printf("Enter var from 3\n ");
+    scanf("%d",&n3);
+    fun3(n3);
+    // Задание 2
+    int n2;
+    printf("Enter n var from 2\n  ");
+    scanf("%d",&n2);
+    fun2(n2);
+
+    return 0;
+}
+
