@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+using namespace std;
+
+struct Square
+{
+    struct point A;
+    struct point B;
+    struct point C;
+    struct point D;
+};
+
+int main() {
+    int Ax, Ay;
+    int Bx, By;
+    int Cx, Cy;
+    int Dx, Dy;
+
+    printf("A(x,y): ");
+    scanf("%d %d", &Ax, &Ay);
+    printf("B(x,y): ");
+    scanf("%d %d", &Bx, &By);
+    printf("C(x,y): ");
+    scanf("%d %d", &Cx, &Cy);
+    printf("D(x,y): ");
+    scanf("%d %d", &Dx, &Dy);
+
+
+
+    struct Square squ = Form(Ax, Ay, Bx, By, Cx, Cy,Dx, Dy);
+
+    float AB = vecLen(squ.A.x, squ.A.y, squ.B.x, squ.B.y);
+
+
+    printf("Perimeter of Square = %.2f\n",findPerimetr(AB));
+    printf("Square of Square = %.2f\n",findSquare(AB));
+
+    return 0;
+}
