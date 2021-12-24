@@ -1,0 +1,14 @@
+
+#include<stdio.h>
+int main(void)
+{   
+    int var;
+    float var1;
+    printf("Введите целое число\n");
+    scanf("%d",&var);
+    printf("%d\n",var);
+    printf("Введите вещественное число\n");
+    scanf("%f",&var1);
+    printf("%f\n",var1);
+    return 0;
+}
